@@ -1,0 +1,25 @@
+Title: Context7 MCP Server for Up-to-date Code Documentation and LLM Integration
+
+This repository provides a Model Context Protocol (MCP) server for delivering up-to-date, version-specific code documentation and examples to LLMs and AI code editors. It solves the problem of outdated, hallucinated, or generic code completions by streaming real documentation and code patterns directly into the prompt context. Ideal for agents and developers needing instant, accurate, and context-aware code intelligence for any library or API.
+
+Key Components:
+• src/: Core server logic - request handling, documentation retrieval, MCP protocol - extend for new transports or features
+• schema/: Data schemas - validation, structure enforcement - update for new doc types or API changes
+• docs/: Usage guides, integration instructions - onboarding, troubleshooting - reference for client setup
+• smithery.yaml: MCP server registration - Smithery integration - modify for deployment or registry updates
+• Dockerfile: Containerization - deployment automation - adapt for cloud or local environments
+
+Tips or Insights:
+• Architecture Pattern: Modular MCP server - separates transport, doc retrieval, and formatting - enables rapid adaptation to new clients
+• Naming Convention: context7, upstash/context7-mcp - consistent with MCP ecosystem - extend with /docs, /api, /schema for clarity
+• Domain Assumptions: Node.js >= v18, LLM/AI client integration - ensure compatible runtime and client support
+• Integration Points: Cursor, Windsurf, Claude, VS Code, JetBrains, Docker - see docs/ for config patterns - handle transport and auth differences
+• Search Patterns: "context7", "MCP server", "upstash/context7-mcp", "model context protocol" - use for finding relevant code and docs
+
+MCP-Specific Considerations:
+• Structured Knowledge: Documentation and code examples organized for direct MCP consumption
+• Tool Integration: Exposes resolve-library-id and get-library-docs for agent use
+• Context Preservation: Maintains library, version, and API context for accurate tool selection
+• Actionable Patterns: Focus on directly implementable code and configuration patterns
+
+Best used by agents that need to inject up-to-date code documentation, resolve library IDs, or fetch context-specific code examples. Particularly valuable for LLM-based coding assistants, IDE integrations, and automation agents working with dynamic or rapidly evolving codebases.
